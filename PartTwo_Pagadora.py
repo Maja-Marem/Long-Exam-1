@@ -17,7 +17,6 @@ class TextColor:
 levelling_table =[]
 total_distance = 0
 tp_counter = 1
-Elevation = 0
 
 
 # Functions - relevant opperations
@@ -36,6 +35,7 @@ def floatInput(prompt):
 color_print("PAGADORA - Leveling",TextColor.RED)
 
 BM0 = floatInput("Elevation of BM0: ")
+Elevation = BM0
 
 while True:
     print(tp_counter)
@@ -81,6 +81,6 @@ print(Error)
 if rel_error == 100000:
     print("first order")
 elif rel_error == 5000:
-    print('secomd Error')
+    print('second order')
 else:
-    print("third")
+    print("third order")
