@@ -71,16 +71,16 @@ color_print ("{:-^88}".format("-----------------------"), TextColor.BLUE)
 print()
 
 print(Elevation)
-Error = Elevation - BM0
+Error = abs(Elevation - BM0)
 km = total_distance/1000
 
 rel_error = km/Error
 
-print(Error)
+print(rel_error)
 
-if rel_error == 100000:
+if rel_error >= 100000:
     print("first order")
-elif rel_error == 5000:
+elif rel_error >= 50000 and rel_error< 100000:
     print('second order')
 else:
     print("third order")
